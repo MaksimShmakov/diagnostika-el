@@ -2,7 +2,7 @@
 const tg = window.Telegram?.WebApp;
 if (tg) tg.expand();
 
-const WEBHOOK_URL = "/.netlify/functions/results";
+const WEBHOOK_URL = "/api/results";
 const params = new URLSearchParams(location.search);
 const CLIENT_ID = params.get("client_id") || null;
 const GROUP = params.get("group") || "default";
