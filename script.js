@@ -20,16 +20,17 @@ const GRID_SVG = `
   <!-- Сетка -->
   <rect x="0" y="0" width="240" height="200" fill="url(#gridPattern)" />
 
-  <!-- Две белые стороны -->
+  <!-- Две белые стороны (точка пересечения в (40,100)) -->
   <path d="M40 100 L220 55" stroke="#ffffff" stroke-width="2" />
   <path d="M40 100 L220 165" stroke="#ffffff" stroke-width="2" />
 
-  <!-- Отрезок AB (сдвинут на 20px вправо) -->
-  <line x1="60" y1="90" x2="60" y2="100" stroke="#ff6b73" stroke-width="4" stroke-linecap="round"/>
+  <!-- Отрезок AB: на 1 клетку (20px) правее вершины и между линиями -->
+  <!-- y(top) при x=60 ≈ 95, y(bottom) при x=60 ≈ 107 -->
+  <line x1="60" y1="96" x2="60" y2="106" stroke="#ff6b73" stroke-width="4" stroke-linecap="round"/>
 
-  <!-- Подписи (тоже чуть сдвигаем вправо, чтобы совпали) -->
-  <text x="50" y="88" fill="#ffffff" font-size="12" font-family="Inter, Arial">A</text>
-  <text x="50" y="103" fill="#ffffff" font-size="12" font-family="Inter, Arial">B</text>
+  <!-- Подписи возле отрезка -->
+  <text x="52" y="94" fill="#ffffff" font-size="12" font-family="Inter, Arial">A</text>
+  <text x="52" y="109" fill="#ffffff" font-size="12" font-family="Inter, Arial">B</text>
 </svg>`;
 
 // ==================== БАНК ВОПРОСОВ ====================
