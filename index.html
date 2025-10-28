@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EL • Диагностика</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <meta name="theme-color" content="#0B0B0F"/>
+
+  <!-- ✅ MathJax до загрузки script.js -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] },
+      svg: { fontCache: "global" }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header class="el-header">
+    <div class="brand">
+      <svg class="logo" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" fill="#ff2a39"/>
+        <path d="M7 8h7M7 12h10M7 16h7" stroke="#0B0B0F" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>EL • Диагностика</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1>Быстрый тест знаний</h1>
+      <p class="muted">Отвечай честно — увидишь темы, где ты 🔥 и где стоит подтянуться.</p>
+    </section>
+
+    <div id="quiz" class="quiz"></div>
+
+    <footer class="footer">
+      <button id="submitBtn" class="el-btn">
+        Отправить результат
+        <span class="btn-glow" aria-hidden="true"></span>
+      </button>
+    </footer>
+  </main>
+
+  <noscript>Для прохождения диагностики включите JavaScript.</noscript>
+
+  <!-- Твой основной JS -->
+  <script src="./script.js"></script>
+</body>
+</html>
